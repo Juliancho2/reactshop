@@ -1,4 +1,3 @@
-"use-client";
 import React, { useContext, useEffect } from "react";
 import Header from "@components/Header";
 import AppContext from "@context/AppContext";

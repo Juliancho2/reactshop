@@ -7,8 +7,7 @@
   min-height: 60vh;
   background: linear-gradient(0deg, #c2c2c2, rgba(0, 0, 0, 0.2)),
     url("../assets/icons/Banner.png") center/cover repeat;
-    font-family: "Quicksand", sans-serif;
-   
+  font-family: "Quicksand", sans-serif;
 }
 
 .Banner img {
@@ -59,20 +58,19 @@
   gap: 10px;
   z-index: 1;
   width: 400px;
- 
 }
 .Banner ul > li {
   list-style: none;
 }
-.disabled{
+.disabled {
   background: #fff !important;
   color: rgb(123, 123, 123) !important;
   transition: all ease-in-out 0.4s !important;
   font-weight: bold !important;
   transform: scale(1.1);
-  transition: all ease-in .2s !important;
+  transition: all ease-in 0.2s !important;
 }
-.Banner ul li  button {
+.Banner ul li button {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -83,19 +81,18 @@
   border-radius: 50%;
   color: #ffffff;
   font-weight: 600;
-  box-shadow:  2px 2px 4px rgba(30, 29, 29, 0.3);
+  box-shadow: 2px 2px 4px rgba(30, 29, 29, 0.3);
   font-family: "Quicksand", sans-serif;
   font-size: 16px;
-
 }
-.Banner ul li  button:hover {
+.Banner ul li button:hover {
   background: #fff;
   color: rgb(123, 123, 123);
   transition: all ease-in-out 0.4s;
 }
 
-@media (max-width:600px) {
-  .Banner{
+@media (max-width: 600px) {
+  .Banner {
     justify-content: space-around;
   }
   .Banner ul {
@@ -103,20 +100,17 @@
     overflow-x: auto;
     padding: 5px 5px;
     justify-content: flex-start;
-    
-
   }
-  .Banner img{
+  .Banner img {
     width: 290px;
     height: 290px;
   }
-  .Banner h1{
+  .Banner h1 {
     font-size: 45px;
   }
-  .Banner ul li  button{
+  .Banner ul li button {
     width: 70px;
     height: 70px;
     font-size: 12px;
   }
 }
-

@@ -32,7 +32,7 @@
   padding: 0 24px;
   width: 100%;
 }
-.order p{
+.order p {
   width: 100%;
 }
 .order p:nth-child(1) {
@@ -40,8 +40,8 @@
   flex-direction: column;
   font-weight: 500;
 }
-.order p span{
-  color: #8a8a8a ;
+.order p span {
+  color: #8a8a8a;
   font-size: var(--sm);
 }
 .order p span:nth-child(1) {
