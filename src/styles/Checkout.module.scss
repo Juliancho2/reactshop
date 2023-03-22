@@ -18,28 +18,36 @@
 .Checkout-content {
   display: flex;
   flex-direction: column;
+  font-weight: 500;
+  align-items: center;
 }
 .order {
   display: grid;
   grid-template-columns: auto 1fr;
   gap: 16px;
   align-items: center;
-  background-color: var(--text-input-field);
   margin-bottom: 24px;
   border-radius: 8px;
+  background: #eeeeee;
   padding: 0 24px;
+  width: 100%;
+}
+.order p{
+  width: 100%;
 }
 .order p:nth-child(1) {
   display: flex;
   flex-direction: column;
+  font-weight: 500;
+}
+.order p span{
+  color: #8a8a8a ;
+  font-size: var(--sm);
 }
 .order p span:nth-child(1) {
   font-size: var(--md);
   font-weight: bold;
-}
-.order p span:nth-child(2) {
-  font-size: var(--sm);
-  color: var(--very-light-pink);
+  color: #0a0a0adc;
 }
 .order p:nth-child(2) {
   text-align: end;

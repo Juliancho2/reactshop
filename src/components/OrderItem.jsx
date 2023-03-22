@@ -10,6 +10,7 @@ const OrderItem = ({ product }) => {
     removeFromCart(product);
   };
 
+  console.log(product);
   return (
     <>
       {product && (

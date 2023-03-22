@@ -4,6 +4,7 @@ const initialState = {
   cart: [],
   orderIsOpen: false,
   menuIsOpen: false,
+  category: "all",
 };
 
 const useInitialState = () => {
@@ -16,13 +17,16 @@ const useInitialState = () => {
         ? state.cart
         : [...state.cart, payload],
     });
+    localStorage.setItem("cart", JSON.stringify(state.cart.concat(payload)));
   };
 
   const removeFromCart = (payload) => {
+    const newArr = state.cart.filter((items) => items.id !== payload.id);
     setState({
       ...state,
-      cart: state.cart.filter((items) => items.id !== payload.id),
+      cart: newArr,
     });
+    localStorage.setItem("cart", JSON.stringify(newArr));
   };
 
   const toggleOrder = () => {
@@ -38,6 +42,12 @@ const useInitialState = () => {
       menuIsOpen: !state.menuIsOpen,
     });
   };
+  const toggleCategory = (payload) => {
+    setState({
+      ...state,
+      category: payload,
+    });
+  };
 
   return {
     state,
@@ -45,6 +55,8 @@ const useInitialState = () => {
     removeFromCart,
     toggleOrder,
     toggleMenu,
+    toggleCategory,
+    setState,
   };
 };
 

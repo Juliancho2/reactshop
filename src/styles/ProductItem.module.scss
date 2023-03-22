@@ -2,6 +2,15 @@
 
 .ProductItem {
   width: 240px;
+  animation: load 1s;
+}
+@keyframes load {
+  to {
+    opacity: 1;
+  }
+  from {
+    opacity: 0;
+  }
 }
 .ProductItem img {
   width: 240px;
@@ -39,6 +48,10 @@
 }
 .disabled {
   cursor: not-allowed;
+}
+.more-clickable-area button {
+  border: none;
+  background: transparent;
 }
 @media (max-width: 640px) {
   .cards-container {

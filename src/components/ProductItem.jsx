@@ -4,13 +4,14 @@ import AppContext from "../context/AppContext";
 import addToCartImage from "@icons/bt_add_to_cart.svg";
 import addedToCartImage from "@icons/bt_added_to_cart.svg";
 import Image from "next/image";
+import swal from "sweetalert";
 
 const ProductItem = ({ product }) => {
   const { state, addToCart } = useContext(AppContext);
 
   const handleClick = (item) => {
-    // console.log('in cart: ', state.cart.includes(item));
     addToCart(item);
+    swal("Product added successfully");
   };
 
   return (
@@ -18,13 +19,13 @@ const ProductItem = ({ product }) => {
       <Image
         width={300}
         height={300}
-        src={product?.images[0]}
-        alt={product?.title}
+        src={`${product.images[0]}`}
+        alt={product.title}
       />
       <div className={styles["product-info"]}>
         <div>
-          <p>${product?.price}</p>
-          <p>{product?.title}</p>
+          <p>${product.price}</p>
+          <p>{product.title}</p>
         </div>
         <figure className={styles["more-clickable-area"]}>
           <button onClick={() => handleClick(product)}>
